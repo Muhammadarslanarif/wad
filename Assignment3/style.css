@@ -1,0 +1,151 @@
+#header
+{
+    background-color:#fbfbfb;
+    background-repeat:repeat-x;
+}
+#logo
+{
+    display:inline-block;
+}
+#menu ul
+{
+    display:inline-block;
+    list-style-type:none;
+    padding: 0px;
+    margin:0px;
+}
+
+#menu li
+{
+    display:inline-block;
+    margin:0px;
+    padding:0px;
+}
+
+#menu a:link,a:visited
+{
+    display:inline-block;
+    width:auto;
+    padding-left:47.5px;
+    padding-right:47.5px;
+    padding-top:9px;
+    padding-bottom:9px;
+    text-decoration:none;
+    color:black;
+    text-align:center;
+    background-color:#fbfbfb;
+}
+
+#menu a:hover,a:active
+{
+    background-color:#fbfbfb;
+}
+
+input[type=text] {
+    width: 50%;
+    font-size: 16px;
+    border:1px solid black;
+    color:grey;
+    background-color: #333333;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+#search{
+    background-color: #333333;
+    width:100%;
+}
+#container {
+
+    background-color: #fbfbfb;
+    color: grey;
+    width:100%;
+    height:600px;
+}
+#container1 {
+    background-color: #fbfbfb;
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+    color:grey;
+}
+
+#left {
+    background-color: #fbfbfb;
+    width: 40%;
+    height: 449px;
+    margin: 0 auto;
+    color:grey;
+    float:left;
+}
+
+#right {
+    background-color: #fbfbfb;
+    width: 59%;
+    height: 449px;
+    margin: 0 auto;
+    color:grey;
+    float:left;
+}
+
+#container2 {
+    background-color: #fbfbfb;
+    width: 100%;
+    height: 550px;
+    margin: 0 auto;
+    color:grey;
+}
+
+#div1 {
+    background-color: #fbfbfb;
+    width: 33%;
+    height: 550px;
+    margin: 0 auto;
+    color:grey;
+    float:left;
+}
+
+#div2 {
+    background-color: #fbfbfb;
+    width: 33%;
+    height: 550px;
+    margin: 0 auto;
+    color:grey;
+    float:left;
+}
+
+#div3 {
+    background-color: #fbfbfb;
+    width: 33%;
+    height: 550px;
+    margin: 0 auto;
+    color:grey;
+    float:left;
+}
+#footer {
+    width:100%;
+    background-color: #333333;
+    color: grey;
+    height:200px;
+    padding-top:50px;
+    padding-left:150px;
+}
+
+@media screen and (max-width: 300px) {
+    .log{
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+    }
+}

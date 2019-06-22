@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<style>
+    header {
+        background-color: darkblue;
+    }
+    body {
+        background-color: lightsteelblue;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: 1350px 600px;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding:  15px;
+    }
+
+    li a:hover {
+        background-color: #111111;
+    }
+
+    h1{
+        padding-left: 580px;
+        font-size: 50px;
+        margin-top: 10px;
+        color: black;
+    }
+
+    img {
+        display: block;
+        margin-left: 500px;
+        transition: all 1s;
+    }
+    img:hover {
+        transform: scale(1.3);
+    }
+
+    input:invalid {
+        background-color: red;
+    }
+</style>
+
+
+<body>
+<header>
+    <h1 style="color: #80bdff;">
+        Login
+    </h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="forget-password.html">Password-reset</a></li>
+    </ul>
+</header>
+<ul><br><br><br><br>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQGpwlqCJ1PFO724Yg7muRnildE6oi3KK0sNw-5b0eLY0Kj0nEPQ" height="225" width="275">
+</ul><br><br>
+
+<form>
+    Email: <input type="email" name="email"  required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+    Password: <input type="password" name="password" minlength="6"  required
+                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+    <input type="submit" value="Login!">
+</form>
+</body>
+</html>
