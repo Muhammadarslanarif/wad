@@ -3,17 +3,27 @@ if(!isset($_SESSION['user_email'])){
     header('location: login.php?not_admin=You are not Admin!');
 }
 if(isset($_GET['edit_international'])){
-    $get_international = "select * from international where cat_id = '$tour_international'";
+    $get_id = $_GET['edit_tour'];
+    $get_tour = "select * from tours where tour_id='$get_id'";
+    $run_tour = mysqli_query($con, $get_tour);
+    $row_tour = mysqli_fetch_array($run_tour);
+
+    $tour_id = $row_tour['tour_id'];
+    $tour_international = $row_tour['International'];
+    $tour_local = $row_tour['local'];
+
+
+    $get_international = "select * from international where tour_id = '$tour_international'";
     $run_international = mysqli_query($con,$get_international);
     $row_international = mysqli_fetch_array($run_international);
     $tour_id = $row_international['tour_id'];
-    $tour_international = $row_international['country_name'];
+    $tour_international1 = $row_international['country_name'];
 
 }
 if(isset($_POST['update_international'])){
     //getting text data from the fields
     $tour_id = $_POST['tour_id'];
-    $tour_international = $_POST['country_name'];
+    $tour_international1 = $_POST['country_name'];
 
     //getting image from the field
     $international_image = $_FILES['international_image']['name'];
@@ -21,13 +31,13 @@ if(isset($_POST['update_international'])){
 
     move_uploaded_file($international_image_tmp,"international_images/$international_image");
 
-    $update_international = "update international set tour_international = '$tour_international', 
+    $update_international = "update international set tour_international1 = '$tour_international1', 
                                         tour_id = '$tour_id' , 
                                         where tour_id='$tour_id'";
 
-    $update_tour = mysqli_query($con, $update_tour);
-    if($update_tour){
-        header("location: index.php?view_tour");
+    $update_international = mysqli_query($con, $update_international);
+    if($update_international){
+        header("location: index.php?view_international");
     }
 }
 ?>
@@ -55,7 +65,7 @@ if(isset($_POST['update_international'])){
                         while ($row_internationals= mysqli_fetch_array($run_internationals)){
                             $tour_id = $row_internationals['tour_id'];
                             $country_name = $row_internationals['country_name'];
-                            echo "<option value='$cat_id'>$country_name </option>";
+                            echo "<option value='$tour_id'>$country_name </option>";
                         }
                         ?>
                     </select>
