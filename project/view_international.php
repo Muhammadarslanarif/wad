@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-12">
-        <h1>tours</h1>
+        <h1>International tours</h1>
         <table class="table table-striped">
             <thead>
             <tr>
