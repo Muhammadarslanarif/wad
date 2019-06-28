@@ -18,7 +18,7 @@ if(isset($_GET['edit_tour'])){
     $pro_desc = $row_pro['pro_desc'];
     $pro_keywords = $row_pro['pro_keywords'];*/
 
-    $get_international = "select * from international where cat_id = '$tour_international'";
+    $get_international = "select * from international where tour_id = '$tour_international'";
     $run_international = mysqli_query($con,$get_international);
     $row_international = mysqli_fetch_array($run_international);
     $tour_id = $row_international['tour_id'];
@@ -75,7 +75,7 @@ if(isset($_POST['update_tour'])){
                         while ($row_internationals= mysqli_fetch_array($run_internationals)){
                             $tour_id = $row_internationals['tour_id'];
                             $country_name = $row_internationals['country_name'];
-                            echo "<option value='$cat_id'>$country_name </option>";
+                            echo "<option value='$tour_id'>$country_name </option>";
                         }
                         ?>
                     </select>
